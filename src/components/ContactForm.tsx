@@ -86,7 +86,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="px-6 py-3 mt-5 text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors duration-300"
+        className="px-6 py-3 mt-5 text-white bg-green-800 rounded-md hover:bg-green-900 transition-colors duration-300"
       >
         {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
       </button>

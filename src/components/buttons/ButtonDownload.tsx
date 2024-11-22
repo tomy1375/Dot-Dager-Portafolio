@@ -37,17 +37,17 @@ export default function CVDownloadButton({ fileName = "cv.pdf" }: CVDownloadButt
       disabled={isDownloading}
       className={`
         relative overflow-hidden px-8 py-3 rounded-lg
-        bg-gradient-to-r from-purple-500 to-indigo-600
+        bg-gradient-to-r from-green-700 to-indigo-600
         text-white font-semibold text-lg
         transition-all duration-300 ease-in-out
         transform hover:scale-105 hover:shadow-lg
         focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50
-        ${isDownloading ? 'cursor-not-allowed opacity-75' : 'hover:from-purple-600 hover:to-indigo-700'}
+        ${isDownloading ? 'cursor-not-allowed opacity-75' : 'hover:from-green-700 hover:to-indigo-700'}
       `}
     >
       <span className="flex items-center justify-center">
         <Download className={`mr-2 h-5 w-5 ${isDownloading ? 'animate-bounce' : 'animate-pulse'}`} />
-        {isDownloading ? 'Descargando...' : 'Descargar CV'}
+        {isDownloading ? 'Nos vemos rey...' : 'Haz clic si eres valiente'}
       </span>
       <span 
         className={`

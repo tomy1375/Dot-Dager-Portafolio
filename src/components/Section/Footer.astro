@@ -1,15 +1,17 @@
 ---
+import { Heart } from "lucide-react";
+
 // Footer.astro
 const navItems = [
   { href: "inicio", text: "Inicio" },
   { href: "sobreMi", text: "Sobre mí" },
-  { href: "experiencia", text: "Experiencia" },
+  { href: "proyectos", text: "Comunidad" },
   { href: "tecnologias", text: "Tecnologías" },
   { href: "contacto", text: "Contacto" }
 ];
 ---
 
-<footer class="relative mt-52 bg-gray-900 text-white">
+<footer class="relative mt-52 bg-green-950 text-white">
   <div class="wave-container">
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -38,8 +40,8 @@ const navItems = [
       ))}
     </div>
 
-    <div class="border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
-      <div class="flex justify-center md:order-2">
+    <div class="border-t border-black pt-8 md:flex md:items-center md:justify-between opacity-85">
+      <div class="flex justify-center md:order-2 opacity-85">
         <a href="#" class="text-gray-400 hover:text-purple-400 mx-3 transition-colors duration-300">
           <span class="sr-only">Facebook</span>
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -71,7 +73,7 @@ const navItems = [
 
       <div class="mt-8 md:mt-0 md:order-1">
         <p class="text-center text-base text-gray-400">
-          &copy; 2024 Tomas Ramos. Todos los derechos reservados.
+          &copy; 2024 Página creada con <Heart className="inline w-5 h-5 text-red-500" /> a los gatos. Todos los derechos reservados.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 ---
 import SocialButton from "./buttons/SocialButton.astro";
-
+import Pepinillo from "./icons/pepinillo.astro";
 
 ---
 
@@ -9,12 +9,16 @@ import SocialButton from "./buttons/SocialButton.astro";
       <div class="container-title mb-32">
         <span class="text-white opacity-80 text-lg name">
           Hola, Me gustan los pepinillos
-          <span class="hand-icon">🥦</span>
+          <span class="hand-icon">
+
+              <Pepinillo/>
+          </span>
+          <span></span>
         </span>
         <h1>&lt;Dot Dager&gt;</h1>
 
-        <h2 class="">Developer</h2>
-        <SocialButton class="social-buttons" />
+        <h2 class="flex items-center justify-center">Full-stack senior</h2>
+        <SocialButton class="social-buttons justify-center items-center" />
       </div>
     </div>
   </section>

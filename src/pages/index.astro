@@ -9,68 +9,69 @@ import Footer from '../components/Section/Footer.astro';
 import Header from '../components/Header.astro';
 ---
 
-<Layout  title="Tomas Ramos">
-	<Header></Header>
-		<main id="experiencia" class="flex flex-col items-center self-center mt- w-full max-w-[1044px] px-4 max-md:mt-10">
-		<!-- <ExperienceItem/>	   -->
-		</main>
-		<section>
-			
-		</section>
-		<div id="proyectos" class="mt-20 ">
-			<section id="proyectos" class="mt-12">
-				<Projects client:only/>
-			</section>
-		</div>
-		<section id="tecnologias">
-			<section class="mt-52 max-md:mt-10 items-center">
-			  <h2 data-layername="tecnologias" class="text-center text-6xl font-semibold leading-none text-white max-md:text-4xl max-w-4xl mx-auto mt">
-				Tecnologías
-			  </h2>
-			  <div class="shrink-0 mt-2.5 border-violet-800 border-solid border-[5px] h-[9px] w-[125px] mx-auto" />
-			  <p data-layername="miAreaPrincipalDeEspecializacionEsElDesarrolloFrontendPeroMiFormacionEsFullStack" class="text-center mt-16 text-lg leading-none text-white max-md:mt-10 max-w-4xl mx-auto">
-				Desarrollador Frontend con formación Full Stack, especializado en la creación de interfaces dinámicas.
-			  </p>
-			  <p class="self-end mt-6 text-lg leading-7 max-w-5xl mx-auto text-white text-center">
-				Trabajo con tecnologías como HTML, CSS, JavaScript, React y Astro, además de Tailwind CSS y Figma para diseños modernos y funcionales. En el área backend, tengo experiencia con Node.js y SQL. Mi manejo de herramientas como Photoshop, Illustrator y After Effects me permite aportar un enfoque creativo y visual a los proyectos.
-			  </p>
-			  <div class="mt-12">
-				  <Technologies/>
-			  </div>
-			  <div class="flex gap-5 justify-between items-center mt-36 max-w-full w-[878px] ">
-			</div>
-		</section >
-		<section id="sobreMi">
-		<AboutMe/>
-	</section>
-	<section id="contacto">
-			<Contact/>
-		</section>
-		<section class="flex items-center justify-center mt-5">
-			<iframe title="Lumber Jack Game" src="https://tbot.xyz/lumber/" width="600" height="800" class="items-center justify-center"></iframe> 
-		</section>
-		<Footer/>
-		</section>
-		  
-	</Layout>
-	
-	
-		<style is:inline>
-			.experience-item {
-			  position: relative;
-			  background: linear-gradient(#13151a,#13151a) padding-box,
-						  linear-gradient(145deg,transparent 35%,#e81cff,#40c9ff) border-box;
-			  border: 2px solid transparent;
-			  border-radius: 5px;
-			  transition: all .6s cubic-bezier(.23,1,.32,1);
-			  padding: 15px 10px;
-			}
-			.box-shadow-custom {
-	  box-shadow: 0 0 10px rgba(255, 0, 127, 0.8),
-				  0 0 20px rgba(255, 0, 127, 0.6),
-				  0 0 30px rgba(255, 0, 127, 0.4);
-	}
-	.glow-effect {
+<Layout title="Tomas Ramos">
+  <Header />
+  <main id="experiencia" class="flex flex-col items-center self-center mt- w-full max-w-[1044px] px-4 max-md:mt-10">
+    <!-- <ExperienceItem /> -->
+  </main>
+  <section>
+  </section>
+  <div id="proyectos" class="mt-20">
+    <section id="proyectos" class="mt-12">
+      <Projects client:only />
+    </section>
+  </div>
+  <!-- <section id="tecnologias">
+    <section class="mt-52 max-md:mt-10 items-center">
+      <h2 data-layername="tecnologias" class="text-center text-6xl font-semibold leading-none text-white max-md:text-4xl max-w-4xl mx-auto mt">
+        Tecnologías
+      </h2>
+      <div class="shrink-0 mt-2.5 border-violet-800 border-solid border-[5px] h-[9px] w-[125px] mx-auto" />
+      <p data-layername="miAreaPrincipalDeEspecializacionEsElDesarrolloFrontendPeroMiFormacionEsFullStack" class="text-center mt-16 text-lg leading-none text-white max-md:mt-10 max-w-4xl mx-auto">
+        Desarrollador Frontend con formación Full Stack, especializado en la creación de interfaces dinámicas.
+      </p>
+      <p class="self-end mt-6 text-lg leading-7 max-w-5xl mx-auto text-white text-center">
+        Trabajo con tecnologías como HTML, CSS, JavaScript, React y Astro, además de Tailwind CSS y Figma para diseños modernos y funcionales. En el área backend, tengo experiencia con Node.js y SQL. Mi manejo de herramientas como Photoshop, Illustrator y After Effects me permite aportar un enfoque creativo y visual a los proyectos.
+      </p>
+      <div class="mt-12">
+        <Technologies />
+      </div>
+      <div class="flex gap-5 justify-between items-center mt-36 max-w-full w-[878px]">
+      </div>
+    </section>
+  </section> -->
+  <section id="sobreMi">
+    <AboutMe />
+  </section>
+  <section id="contacto">
+    <Contact />
+  </section>
+  <section id="tecnologias" class="flex flex-col items-center justify-center mt-20 rounded-lg">
+    <h1 class="text-center text-2xl font-bold text-white mb-4 mt-12">
+      Lumber Jack Game: Cortando árboles y tus últimas esperanzas de dejar de ser virgo
+	  <div class="shrink-0 mt-2  items-end border-green-700 border-solid border-[4px] h-[4px] w-[100px] mx-auto" />
+    </h1>
+    <iframe title="Lumber Jack Game" src="https://tbot.xyz/lumber/" width="600" height="800" class="rounded-lg mt-2"></iframe>
+  </section>
+  <Footer />
+</Layout>
+
+<style is:inline>
+  .experience-item {
+    position: relative;
+    background: linear-gradient(#13151a,#13151a) padding-box,
+                linear-gradient(145deg,transparent 35%,#e81cff,#40c9ff) border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all .6s cubic-bezier(.23,1,.32,1);
+    padding: 15px 10px;
+  }
+  .box-shadow-custom {
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.8),
+                0 0 20px rgba(255, 0, 127, 0.6),
+                0 0 30px rgba(255, 0, 127, 0.4);
+  }
+  .glow-effect {
     animation: glow 2s ease-in-out infinite;
   }
   @keyframes glow {
@@ -90,4 +91,5 @@ import Header from '../components/Header.astro';
                   0 0 30px rgba(255, 0, 127, 0.4);
     }
   }
-		  </style>
+</style>
+
