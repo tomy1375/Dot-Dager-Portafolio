@@ -1,11 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
 ---
-<Layout title="Portafolio app error 404 ">
-    <section class="flex overflow-hidden flex-col justify-center items-center px-20 py-24 bg-green-950 max-md:px-5 w-full h-screen">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0787d6f60d5f4950c71cd4388633e907a050db63325f7dc4f8f914a94bf65c24?placeholderIfAbsent=true&apiKey=9fe8dc76776646f4a6bc648caa0a3bac" alt="Hero section banner" class="object-contain rounded-3xl aspect-[1.41] max-w-full max-md:max-w-full" />
-    </section>
-    
+
+<Layout title="Portafolio app error 404">
+  <section class="relative flex overflow-hidden flex-col justify-center items-center px-20 py-24 bg-green-950 max-md:px-5 w-full h-screen rounded-xl">
+      <img
+      loading="lazy"
+      src="/antro.webp"
+      alt="Hero section banner"
+      class="object-contain rounded-3xl aspect-[1.41] max-w-full max-md:max-w-full  "
+      />
+      <a
+      href="/"
+      class="absolute bottom-1/3 px-6 py-3 text-lg font-semibold text-green-950 bg-white rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-green-100 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 animate-bounce"
+      >
+      Volver a casa
+    </a>
+    <!-- <h1 class="z-50 text-white">sdsdsdsdsdfsdf</h1> -->
+  </section>
 </Layout>
+
+<style>
+  @keyframes gentle-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-bounce {
+    animation: gentle-bounce 2s infinite;
+  }
+</style>
+
