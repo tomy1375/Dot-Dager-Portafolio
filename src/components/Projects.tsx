@@ -1,6 +1,6 @@
 'use client'
 import { ICONS } from './data/IconsTecnologies';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react'
 
@@ -8,30 +8,43 @@ interface ProjectCardProps {
   imageSrc: string;
   title: string;
   description: string;
-  // technologies: string[];
+  technologies: string[];
   githubLink?: string;
   liveLink?: string;
-  liveLinkText?: string; // Nueva propiedad
-  liveLinkColor?: string; // Nueva propiedad para color del enlace
+  liveLinkText?: string;
+  liveLinkColor?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
   imageSrc, 
   title, 
   description, 
-  // technologies = [], 
+  technologies = [], 
   githubLink, 
   liveLink,
-  liveLinkText = 'Ver proyecto', // Valor por defecto
-  liveLinkColor = 'bg-violet-800 hover:bg-violet-900' // Color por defecto
+  liveLinkText = 'Ver proyecto',
+  liveLinkColor = 'bg-violet-800 hover:bg-violet-900'
 }) => {
+  const [clickCount, setClickCount] = useState(0);
   const [showGithub, setShowGithub] = useState(true);
+  const [buttonText, setButtonText] = useState('No');
 
   const handleGithubClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+    setClickCount((prevCount) => (prevCount + 1) % 5);
     setShowGithub(false);
-    setTimeout(() => setShowGithub(true), 2000);
+    setTimeout(() => {
+      setShowGithub(true);
+      setButtonText('No');
+    }, 2000);
   };
+
+  useEffect(() => {
+    const texts = ["Bueno",'Bueno', 'dije bueno', 'huu loco', 'Malote'];
+    if (!showGithub) {
+      setButtonText(texts[clickCount]);
+    }
+  }, [clickCount, showGithub]);
 
   return (
     <motion.div
@@ -53,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h3>
         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{description}</p>
         <div className="flex flex-wrap gap-8 mb-4">
-          {/* {technologies.map((tech, index) => {
+          {technologies.map((tech, index) => {
             const icon = ICONS.find(icon => icon.name.toLowerCase() === tech.toLowerCase());
             return (
               <span key={index} className="">
@@ -62,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 )}
               </span>
             );
-          })} */}
+          })}
         </div>
       </div>
       <div className="flex justify-between p-6 pt-0">
@@ -70,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <AnimatePresence mode="wait">
             {showGithub ? (
               <motion.a
-                key="no"
+                key={buttonText}
                 href={githubLink}
                 onClick={handleGithubClick}
                 className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 transition-colors"
@@ -80,11 +93,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 transition={{ duration: 0.2 }}
               >
                 <Github className="w-4 h-4 mr-2" />
-                No
+                {buttonText}
               </motion.a>
             ) : (
               <motion.span
-                key="bueno"
+                key={buttonText}
                 className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -92,7 +105,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 transition={{ duration: 0.2 }}
               >
                 <Github className="w-4 h-4 mr-2" />
-                Bueno
+                {buttonText}
               </motion.span>
             )}
           </AnimatePresence>
