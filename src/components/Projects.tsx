@@ -8,7 +8,7 @@ interface ProjectCardProps {
   imageSrc: string;
   title: string;
   description: string;
-  technologies: string[];
+  // technologies: string[];
   githubLink?: string;
   liveLink?: string;
   liveLinkText?: string;
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageSrc, 
   title, 
   description, 
-  technologies = [], 
+  // technologies = [], 
   githubLink, 
   liveLink,
   liveLinkText = 'Ver proyecto',
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h3>
         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{description}</p>
         <div className="flex flex-wrap gap-8 mb-4">
-          {technologies.map((tech, index) => {
+          {/* {technologies.map((tech, index) => {
             const icon = ICONS.find(icon => icon.name.toLowerCase() === tech.toLowerCase());
             return (
               <span key={index} className="">
@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 )}
               </span>
             );
-          })}
+          })} */}
         </div>
       </div>
       <div className="flex justify-between p-6 pt-0">
