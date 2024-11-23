@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
       title: "El antro de Dager",
       description: "Aquí te encontrarás con almas perdidas, genios incomprendidos y, probablemente, algún bot que cree saber más que vos.",
       technologies: ["JavaScript", "React", "Socket.io","PostreSQL"],
-      githubLink: "https://github.com/tomy1375/Cliente-Hotel-Esmeralda.git",
+      githubLink: "esta 23",
       liveLink: "https://discord.com/invite/4NFk6TamAB",
       liveLinkText: "Unirte al Discord",
       liveLinkColor: "bg-indigo-600 hover:bg-indigo-700 transition" // Color personalizado para Discord
@@ -130,7 +130,7 @@ const Projects: React.FC = () => {
       title: "Caos, risas y mala vida",
       description: "Acá no vas a encontrar perfección, pero sí risas, fails épicos, charlas profundas (o no tanto).",
       technologies: ["React", "CSS", "TypeScript", "Astro"],
-      githubLink: "https://github.com/tomy1375/Spotify-Clone",
+      githubLink: "est2",
       liveLink: "https://www.twitch.tv/dagerxiv",
       liveLinkText: "Vamos a Twitch",
       liveLinkColor: "bg-purple-600 hover:bg-purple-700 transition" // Color personalizado para Twitch
@@ -140,8 +140,8 @@ const Projects: React.FC = () => {
       title: "Código, Gatos y Filosofía",
       description: "Porque nadie dijo que mezclar código con gatos y existencialismo fuera mala idea (aunque claramente nadie lo intentó).",
       technologies: ["HTML", "CSS", "JavaScript","React"],
-      githubLink: "https://github.com/yourusername/pokemon-pokedex",
-      liveLink: "https://pokemon-pokedex.vercel.app",
+      githubLink: "esta",
+      liveLink: "https://www.youtube.com/@DotDager",
       liveLinkText: "Vamos a Youtube",
       liveLinkColor: "bg-red-600 hover:bg-red-700 transition" // Color personalizado para YouTube
     }
