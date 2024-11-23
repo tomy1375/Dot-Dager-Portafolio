@@ -28,8 +28,8 @@ export function ContactForm() {
         Swal.fire({
           icon: 'success',
           title: '¡Éxito!',
-          text: 'Mensaje enviado con éxito',
-          confirmButtonColor: '#9333ea', // Tailwind's purple-600
+          text: 'Tu sabiduría ahora viaja por los cables del Internet. Que el universo se prepare para recibirlo.',
+          confirmButtonColor: '#048300', // Tailwind's purple-600
         });
         formRef.current?.reset();
       } else {
@@ -40,8 +40,8 @@ export function ContactForm() {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Error al enviar el mensaje. Por favor, intenta de nuevo.',
-        confirmButtonColor: '#9333ea', // Tailwind's purple-600
+        text: 'Al parecer, el sistema no quería escuchar tus sabias palabras. Intenta de nuevo campeón, esta vez podría funcionar... o no.',
+        confirmButtonColor: '#048300', // Tailwind's purple-600
       });
     } finally {
       setIsSubmitting(false);
