@@ -46,12 +46,20 @@ import Header from '../components/Header.astro';
   <section id="contacto">
     <Contact />
   </section>
-  <section id="tecnologias" class="flex flex-col items-center justify-center mt-20 rounded-lg">
-    <h1 class="text-center text-4xl font-bold text-white mb-4 mt-12">
+  <section id="tecnologias" class="flex flex-col items-center justify-center mt-20 px-4 ">
+    <h1 class="text-center text-4xl font-bold text-white mb-4 mt-12 max-md:text-3xl max-sm:text-2xl">
       Cortando árboles y tus últimas esperanzas de dejar de ser virgo
-	  <div class="shrink-0 mt-2  items-end border-green-700 border-solid border-[4px] h-[4px] w-[100px] mx-auto" />
+      <div class="shrink-0 mt-2 items-end border-green-700 border-solid border-[4px] h-[4px] w-[100px] mx-auto" />
     </h1>
-    <iframe title="Lumber Jack Game" src="https://tbot.xyz/lumber/" width="600" height="800" class="rounded-lg mt-2"></iframe>
+    
+    <div class="w-full max-w-[600px] aspect-[3/4] relative">
+      <iframe 
+        title="Lumber Jack Game" 
+        src="https://tbot.xyz/lumber/" 
+        class="absolute top-0 left-0 w-full h-full rounded-lg"
+        style="border: 0;"
+      ></iframe>
+    </div>
   </section>
   <Footer />
 </Layout>
